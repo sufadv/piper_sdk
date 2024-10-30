@@ -59,8 +59,8 @@ Each arm-related class includes a timestamp. For data requiring multiple CAN fra
 
 ### 3. Function Analysis
 
-| Function                | Type          | Description                                                                                                                   | Usage                              | Parameters                                   | Feedback                    |
-|-------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------|------------------------------------|----------------------------------------------|-----------------------------|
+| Function                | Type          | Description | Usage | Parameters | Feedback                    |
+|-------------------------|---------------|-------------|-------|------------|-----------------------------|
 | `ConnectPort`           | Getter Method | Function to open CAN message reading, calling the read function and creating a read thread to process messages.               | Used to open data processing thread after class instantiation. | None | None |
 | `ParseCANFrame`         | Getter Method | CAN protocol parsing function, processes received CAN frames, used as a callback for receiving messages.                     | Creates local variable, calls decoding function in parser class, and updates messages if decoding succeeds. | `rx_message: Optional[can.Message]` | None |
 | `GetArmStatus`          | Getter Method | Retrieves the arm's status information. Uses mutex `__arm_status_mtx` to ensure thread safety.                                | `obj.GetArmStatus()`               | None                                         | `self.__arm_status`         |
