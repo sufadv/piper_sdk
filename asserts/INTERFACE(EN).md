@@ -95,9 +95,7 @@ Each arm-related class includes a timestamp. For data requiring multiple CAN fra
 | `__CartesianCtrl_XY` | Ctrl Method | Controls arm motion on the XY-axis in Cartesian coordinates. | Internal use (private) | `X (float)`, `Y (float)` | None |
 | `__CartesianCtrl_ZRX` | Ctrl Method | Controls arm motion on the Z-axis and RX in Cartesian coordinates. | Internal use (private) | `Z (float)`, `RX (float)` | None |
 | `__CartesianCtrl_RYRZ` | Ctrl Method | Controls arm motion on the RY and RZ axes in Cartesian coordinates. | Internal use (private) | `RY (float)`, `RZ (float)` | None |
-| `JointCtrl` | Ctrl Method | 0x155, 0x156, 0x157, controls the six joints of the arm. Units are 0.001 degrees; for 90 degrees (1.57 radians) on joint 1, send 90\*1000; for radians, use 1.57\*1000\*(180/3.14). | External use | `joint_1 (float)`, ..., `joint_6 (float
-
-| `JointCtrl` | Ctrl Method | 0x155, 0x156, 0x157, controls the six arm joints. Units are 0.001 degrees; to move joint 1 by 90 degrees (1.57 radians), send 90\*1000; for radians, use 1.57\*1000\*(180/3.14). | External use | `joint_1 (float)`, `joint_2 (float)`, `joint_3 (float)`, `joint_4 (float)`, `joint_5 (float)`, `joint_6 (float)` | None |
+| `JointCtrl` | Ctrl Method | 0x155, 0x156, 0x157, controls the six joints of the arm. Units are 0.001 degrees; for 90 degrees (1.57 radians) on joint 1, send 90\*1000; for radians, use 1.57\*1000\*(180/3.14). | External use | `joint_1 (float)`, `joint_2 (float)`, `joint_3 (float)`, `joint_4 (float)`, `joint_5 (float)`, `joint_6 (float)` | None |
 | `__JointCtrl_12` | Ctrl Method | Controls arm joints 1 and 2. | Internal use (private) | `joint_1 (float)`, `joint_2 (float)` | None |
 | `__JointCtrl_34` | Ctrl Method | Controls arm joints 3 and 4. | Internal use (private) | `joint_3 (float)`, `joint_4 (float)` | None |
 | `__JointCtrl_56` | Ctrl Method | Controls arm joints 5 and 6. | Internal use (private) | `joint_5 (float)`, `joint_6 (float)` | None |
